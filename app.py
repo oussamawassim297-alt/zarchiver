@@ -25,8 +25,9 @@ def webhook():
     return "ok", 200
 
 def reply(user_id, text):
-    text = text.strip().lower()
-    if text == "رصيدي":
+    print("Received text:", text, "from user_id:", user_id)
+    text = text.lower()
+    if "رصيدي" in text:
         msg = (
             "مرحبا 👋\n"
             "📱 رقمك: 07********\n"
